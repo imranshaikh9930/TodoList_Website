@@ -8,6 +8,9 @@ import pinterest from "../assets/pinterest.png";
 import twitch from "../assets/twitch.png";
 import Form from "./Form";
 
+const socialImages = [google, facebook, youtube, pinterest, twitch];
+
+
 const Hero = () => {
   const [showForm, setShowForm] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
@@ -64,6 +67,7 @@ const Hero = () => {
 
   return (
     <div className="w-[85vw] max-w-screen-xl mx-auto space-y-10 px-4 md:px-0 py-10 select-none">
+
       <div className="text-center max-w-5xl mx-auto">
         <h3 className="text-4xl lg:text-5xl font-bold text-[#170F49]">
           Simplify Your Life with Our <br className="hidden sm:block" /> Todo
@@ -128,8 +132,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-start gap-4 sm:justify-between sm:gap-4 w-full md:w-[85vw] sm:mx-auto">
-        {[google, facebook, youtube, pinterest, twitch].map((pic, index) => (
+      <div className="flex flex-wrap justify-start gap-4 sm:justify-between sm:gap-4 w-full md:w-[80vw] sm:mx-auto">
+        {socialImages.map((pic, index) => (
           <img
             key={index}
             src={pic}
@@ -137,6 +141,7 @@ const Hero = () => {
             className="w-24 sm:w-[120px] h-10 object-contain"
           />
         ))}
+      
       </div>
 
       {showForm && (

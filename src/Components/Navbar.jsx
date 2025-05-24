@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from "../assets/logo.png"
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,6 +9,7 @@ const Navbar = () => {
       <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between select-none">
         <img src={logo} alt="logo" className='w-[150px] h-auto' />
+        
           <div className="sm:hidden">
             <button
               type="button"
